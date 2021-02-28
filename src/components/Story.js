@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Link = ({url, title}) => {
+const Link = ({ url, title }) => (
   <a href={url} target="_blank" rel="noreferrer">
     {title}
   </a>
-};
+);
 
-const Story = ({story: {id, by, title, kids, time, url}}) => {
+const Story = ({ story: { id, by, title, kids, time, url } }) => {
   return (
     <div className="story">
       <div className="story-title">
@@ -25,7 +25,7 @@ const Story = ({story: {id, by, title, kids, time, url}}) => {
         </span>|
         <span>
           <Link
-            url={`https://new.ycombinator.com/item?id=${id}`}
+            url={`https://news.ycombinator.com/item?id=${id}`}
             title={`${kids && kids.length > 0 ? kids.length : 0} comments`}
           />
         </span>
